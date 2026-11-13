@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Etudiants</title>
+</head>
+<body>
+   
+    <table>
+        <thead>
+            <tr>
+                <th>Numéro</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date de naissance</th>
+                <th>Classe</th>
+                <th>Notes</th>
+                <th>Origine</th>
+                <th>Enregistrer</th>
+                <th>Supprimer</th> -->
+            </tr>
+        </thead>
+        <tbody id="etudiantsTableBody">
+        </tbody>
+    </table>
+
+    <!-- Contrôles de pagination -->
+    <div id="paginationControls" style="margin-top: 20px; text-align: center;">
+        <label for="etudiantsParPageSelect">Étudiants par page:</label>
+        <select id="etudiantsParPageSelect" onchange="changerNombreParPage(this.value)" style="padding: 5px; margin: 0 10px;">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+        </select>
+        <button onclick="pagePrecedente()">Page Précédente</button>
+        <span id="pageInfo" style="margin: 0 20px; font-weight: bold;">Page 1</span>
+        <button onclick="pageSuivante()">Page Suivante</button>
+    </div>
+    <div id="notesContainer">
+        
+    </div>    
+<script src="script.js"></script>
+</body>
+</html>
